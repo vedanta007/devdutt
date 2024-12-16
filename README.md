@@ -1,29 +1,18 @@
-# Create T3 App
+# Full Stack AI SaaS Application
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This repository contains the implementation of a Full Stack AI SaaS application, developed following the ["Build and Deploy Full Stack AI GitHub SaaS | Next JS 15, Google Gemini AI, Assembly AI, Stripe"](https://www.youtube.com/watch?v=OqlI2766LCk&t=5099s) YouTube tutorial by [Elliott Chong](https://www.youtube.com/@elliottchong).
 
-## What's next? How do I make an app with this?
+## Features
+- **Frontend**: Built with Next.js 15 for a modern and responsive user interface.
+- **Backend**: Integrated with Google Gemini AI and Assembly AI for advanced AI capabilities.
+- **Payments**: Stripe API integration for seamless subscription and payment management.
+- **Full-stack**: End-to-end development covering both frontend and backend.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Tech Stack
+- **Frontend**: Next.js 15, React, Tailwind CSS
+- **Backend**: Node.js, Express
+- **AI Services**: Google Gemini AI, Assembly AI
+- **Payments**: Stripe API
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Credits
+This project is based on the tutorial by Elliott Chong. Special thanks to the creator for providing a comprehensive guide to building and deploying a full-stack AI SaaS application.
