@@ -15,4 +15,4 @@ This repository contains the implementation of a Full Stack AI SaaS application,
 - **Payments**: Stripe API
 
 ## Credits
-This project is based on the tutorial by JavaScript Mastery. Special thanks to the creator for providing a comprehensive guide to building and deploying a full-stack AI SaaS application.
+This project is based on the tutorial by Elliott Chong. Special thanks to the creator for providing a comprehensive guide to building and deploying a full-stack AI SaaS application.
