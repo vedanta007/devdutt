@@ -48,5 +48,21 @@ export const projectRouter = createTRPCRouter({
                 projectId: input.projectId
             }
         })
+    }),
+    saveAnswer: protectedProcedure.input(z.object({
+        projectId: z.string(),
+        question: z.string(),
+        answer: z.string(),
+        filesReferenced: z.any(),
+    })).mutation(async({input, ctx})=>{
+        return await ctx.db.question.create({
+            data: {
+                answer: input.answer,
+                question: input.question,
+                projectId: input.projectId,
+                filesReferenced: input.filesReferenced,
+                userId: ctx.user.userId!
+            }
+        })
     })
 })
