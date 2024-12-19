@@ -1,7 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query'
 import React from 'react'
 
-const useReftch = () => {
+const useRefetch = () => {
   const queryClient = useQueryClient()
   return async () => {
     await queryClient.refetchQueries({
@@ -10,4 +10,4 @@ const useReftch = () => {
   }
 }
 
-export default useReftch
+export default useRefetch
