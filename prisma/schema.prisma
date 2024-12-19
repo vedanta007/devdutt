@@ -30,6 +30,7 @@ model Project {
   githubUrl            String
   deletedAt            DateTime?
   commits              Commit[]
+  meetings             Meeting[]
   savedQuestions       Question[]
   sourceCodeEmbeddings SourceCodeEmbedding[]
   userToProjects       UserToProject[]
@@ -82,4 +83,34 @@ model Question {
   userId          String
   project         Project  @relation(fields: [projectId], references: [id])
   user            User     @relation(fields: [userId], references: [id])
+}
+
+model Meeting {
+  id         String        @id @default(cuid())
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  meetingUrl String
+  projectId  String
+  status     MeetingStatus @default(PROCESSING)
+  name       String
+  issues     Issue[]
+  project    Project       @relation(fields: [projectId], references: [id])
+}
+
+model Issue {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  start     String
+  end       String
+  gist      String
+  headline  String
+  summary   String
+  meetingId String
+  meeting   Meeting  @relation(fields: [meetingId], references: [id])
+}
+
+enum MeetingStatus {
+  PROCESSING
+  COMPLETED
 }
