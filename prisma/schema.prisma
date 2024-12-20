@@ -10,16 +10,17 @@ datasource db {
 }
 
 model User {
-  id             String          @id @default(cuid())
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
-  imageUrl       String?
-  firstName      String?
-  lastName       String?
-  emailAdress    String          @unique
-  credits        Int             @default(150)
-  questionsAsked Question[]
-  userToProjects UserToProject[]
+  id                 String              @id @default(cuid())
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  imageUrl           String?
+  firstName          String?
+  lastName           String?
+  emailAdress        String              @unique
+  credits            Int                 @default(150)
+  questionsAsked     Question[]
+  stripeTransactions StripeTransaction[]
+  userToProjects     UserToProject[]
 }
 
 model Project {
@@ -108,6 +109,15 @@ model Issue {
   summary   String
   meetingId String
   meeting   Meeting  @relation(fields: [meetingId], references: [id])
+}
+
+model StripeTransaction {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  credits   Int
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 enum MeetingStatus {

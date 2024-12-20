@@ -6,7 +6,7 @@ import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-const commitLog = () => {
+const CommitLog = () => {
     const {projectId, project} = useProject()
     const {data: commits} = api.project.getCommits.useQuery({projectId})
     return (
@@ -51,4 +51,4 @@ const commitLog = () => {
     )
 }
 
-export default commitLog
+export default CommitLog
